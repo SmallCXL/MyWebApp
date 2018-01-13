@@ -9,18 +9,18 @@ public class HelloServlet extends javax.servlet.http.HttpServlet {
 
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response){
+    public void doGet(HttpServletRequest request, HttpServletResponse response) {
 
+
+        PrintWriter out = null;
         try {
-//            response.getWriter().println("<h1>Hello Servlet!</h1>");
-//            response.getWriter().println(new Date());
-            PrintWriter out = response.getWriter();
+            out = response.getWriter();
             out.println("<h1>Hello Servlet!</h1>");
             out.println(new Date());
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
+
 
 }
